@@ -6,4 +6,5 @@ WORKDIR /src
 
 FROM base as build
 
-RUN bundle config set deployment 'true'
+COPY Gemfile Gemfile.lock /src
+RUN bundle install
