@@ -4,10 +4,15 @@
 
 .footer-col-3 {width: -webkit-calc(33% - (30px / 2));width: calc(33% - (30px / 2));}
 
+.post-list > li {
+  margin-bottom: 15px;
+}
+
 .post-list .post-link {
   display: inline;
   font-size: inherit;
 }
+
 .svg-icon.keybase	{
   background-size: cover;
   background-repeat: no-repeat;
