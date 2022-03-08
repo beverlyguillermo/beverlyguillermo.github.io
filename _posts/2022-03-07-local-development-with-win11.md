@@ -1,6 +1,6 @@
 ---
-categories: [Tech]
-tags: [Win11]
+layout: post
+title: Local Development with Win11
 ---
 
 ## Reasons
