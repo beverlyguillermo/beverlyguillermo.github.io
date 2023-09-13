@@ -8,3 +8,5 @@ end
 gem "minima"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "wdm" if Gem.win_platform?
+gem "webrick", "~> 1.8"
+
