@@ -25,6 +25,7 @@ keybase_username: beverlyguillermo
 ga_id: "G-GPV3SE00RC"
 
 # Build settings
+paginate: 1
 markdown: kramdown
 theme: minima
 permalink: pretty
@@ -39,6 +40,8 @@ include: ["_pages"]
 # to override the default setting.
 exclude:
   - .git
+  - .idea
+  - .vscode
   - .jekyll-cache
   - .tools-versions
   - docker-compose.yml
@@ -50,3 +53,14 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Navigation
+nav:
+  - title: Archive
+    url: /archive
+
+  - title: About
+    url: /about
+
+  - title: Home
+    url: /
