@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Finding information about UPS for Network UPS Tool
+title: Finding information about my computer backup battery using Network UPS Tool
 ---
 # Sept 2023 - Notes on using Network UPS Tool
 
