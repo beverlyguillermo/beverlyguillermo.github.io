@@ -22,12 +22,16 @@ url: "https://www.beverlyguillermo.com" # the base hostname & protocol for your 
 twitter_username: bguillermo
 github_username: beverlyguillermo
 keybase_username: beverlyguillermo
+ga_id: "G-GPV3SE00RC"
 
 # Build settings
+paginate: 1
 markdown: kramdown
 theme: minima
+permalink: pretty
 plugins:
   - jekyll-feed
+  - jekyll-gist
 
 include: ["_pages"]
 
@@ -35,6 +39,12 @@ include: ["_pages"]
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
+  - .git
+  - .idea
+  - .vscode
+  - .jekyll-cache
+  - .tools-versions
+  - docker-compose.yml
   - Gemfile
   - Gemfile.lock
   - SECURITY.md
@@ -43,3 +53,14 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Navigation
+nav:
+  - title: Archive
+    url: /archive
+
+  - title: About
+    url: /about
+
+  - title: Home
+    url: /
