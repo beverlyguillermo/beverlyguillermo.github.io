@@ -6,19 +6,14 @@
      <div class="footer-col-wrapper">
        <div class="footer-col footer-col-1">
          <ul class="contact-list">
-           <li class="p-name">
-             {%- if site.author -%}
-               {{ site.author | escape }}
-             {%- endif -%}
-           </li>
-           {%- if site.email -%}
-           <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-           {%- endif -%}
-           {% if site.keybase_username %}
+           {%- if site.keybase_username -%}
            <ul class="social-media-list">
              <li><a href="https://keybase.io/{{ site.keybase_username }}"><i class="svg-icon keybase"></i> Contact Me</a></li>
            </ul>
            {% endif %}
+           <li class="rss-subscribe">
+             <a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg>RSS</a>
+           </li>
          </ul>
        </div>
 
@@ -27,10 +22,30 @@
        </div>
 
        <div class="footer-col footer-col-3">
-         <p>{{- site.description | escape -}}</p>
+         <p>
+           {{- site.description | escape -}}
+           <br />
+           <small>
+             &copy;
+             <time datetime="{{ site.time | date_to_xmlschema }}"
+             >{{ site.time | date: '%Y' }}</time
+             >. All rights reserved.
+           </small>
+         </p>
        </div>
      </div>
-
    </div>
+</footer>
 
- </footer>
+
+{%- if jekyll.environment == 'production' and site.ga_id -%}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.ga_id }}');
+</script>
+{% endif %}
