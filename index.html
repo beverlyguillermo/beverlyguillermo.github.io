@@ -13,9 +13,16 @@ title: Home
             </a>
         </h1>
 
-        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <p>
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ post.date | date: date_format }}
+            </time>
+        </p>
 
-        {{ post.content }}
+        <section class="post-content">
+            {{ post.content }}
+        </section>
     </article>
     {% endfor %}
 </div>
