@@ -27,10 +27,10 @@ ga_id: "G-GPV3SE00RC"
 # Build settings
 markdown: kramdown
 theme: minima
+permalink: pretty
 plugins:
   - jekyll-feed
   - jekyll-gist
-  - jekyll-paginate
 
 include: ["_pages"]
 
